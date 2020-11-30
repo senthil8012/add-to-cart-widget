@@ -25,16 +25,16 @@ body {font-family:$font-family;font-size:14px;margin:0;padding:0;}
 .box-cm {width: 70%; margin: 0 auto;position:relative;}
 .label-one {z-index: 1; position: absolute; width: auto; top: 25px; background-color:$info-color; padding: 6px 8px; border-radius: 0px 4px 4px 0px;}
 .label-one label {color:#fff;font-size: 12px;}
-.items-one {padding: 10px; background:$bg-color;}
+.items-one {padding: 10px; background:$bg-color;display: flex;align-items: center; justify-content: center;min-height: 60px;}
 .items-one::after {clear:both;content:" ";display:block;}
-.set-one {float:left;}
+.set-one {float:left;width:60%;}    
 .set-one p {margin:0;}
-.set-two {float:right;}
+.set-two {float:right;width:40%;text-align:right;}
 .book-cover {position: absolute; top: 30%; text-align:center;}
 .book-cover img {width: 30px;}
 .book-cover p {margin: 0; text-transform: uppercase; font-weight: bold; padding: 0 20px; color: $text-color;}
-.add-to-cart {padding-top: 10px;}
-.add-to-cart a {color:$blue; text-decoration: none; border: 1px solid $blue; padding: 5px 8px; display: inline-block; border-radius: 4px; font-size: 13px;}
+.add-to-cart {padding-top: 0px;text-align: right;}
+.add-to-cart a {color:$blue; text-decoration: none; border: 1px solid $blue; padding: 5px 8px; display: inline-block; border-radius: 4px; font-size: 12px;}
 .set-one p {color: $text-color; font-weight: 600;}
 .set-one label {font-weight: bold; color:$text-color;}
 .set-one label span {text-decoration: line-through; text-decoration-color: #ff0000; color: $text-color; padding-right: 10px;}
@@ -47,7 +47,7 @@ body {font-family:$font-family;font-size:14px;margin:0;padding:0;}
 .minus, .plus{padding:8px 5px 8px 5px;display: inline-block; vertical-align: middle; text-align: center;}
 .number input {outline:0 none; height: 28px; width: 28px; text-align: center; font-size: 14px; border: 1px solid $bg-color; display: inline-block; vertical-align: middle;color:$text-color;}
 .img-item {display: inline-block; border: 1px solid $bg-color; padding: 5px;}
-.img-item span {color:$text-color;display: inline-block; vertical-align: middle; height: 25px; line-height: 25px;font-size: 13px;}
+.img-item span {color:$text-color;display: inline-block; vertical-align: middle; height: 25px; line-height: 25px;font-size: 10px;white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 .img-item span.sm-item {padding-left:5px;}
 .img-item span.value-last {padding-left: 20px;}
 .right-section table td p {font-weight:bold;color:$text-color;}
@@ -66,6 +66,9 @@ body {font-family:$font-family;font-size:14px;margin:0;padding:0;}
 .row-center{text-align: center;}
 .value-last i{color:red;}
 @media (min-width:992px) and (max-width:1199px) {
+.set-one p { white-space: nowrap; overflow: hidden; text-overflow: ellipsis;  }
+.set-one label {font-size: 10px;}
+.add-to-cart a{padding:5px;font-size: 10px;}
 .container {width:960px;}
 .multiboxes {width:28%;}
 .book-cover {top:23%;}
@@ -73,15 +76,18 @@ body {font-family:$font-family;font-size:14px;margin:0;padding:0;}
 }
 
 @media (min-width:768px) and (max-width:991px) {
+    .right-space{padding-left: 0px;}
 .container {width:730px;}
 .sec-light {margin: 0 -5px;}
-.multiboxes {width:31%;padding: 0 5px;}
+.multiboxes {width:47%;padding: 0 5px;}
 .box-cm {width:80%;}
 .book-cover p {padding: 0 10px; font-size: 12px;}
 .space-over-img {padding: 20px 0;}
 .label-one {top:20px;}
 .set-two {float: none; clear: both; width: 100%; text-align: center;}
 .book-cover {top:23%;}
+.left-section{width:100%;}
+.right-section{width:100%;padding-bottom: 30px;}
 }
 
 @media (max-width:767px) {
@@ -89,12 +95,13 @@ body {font-family:$font-family;font-size:14px;margin:0;padding:0;}
 .left-section {float:none;width:100%;}
 .right-section {float:none;width:100%;padding-bottom:30px;}
 .sec-light {margin: 0 -9px;text-align:center;}
-.multiboxes {width:29.9%; padding: 0 9px; float:none;display:inline-block;}
+.multiboxes {width:46%; padding: 0 9px; float:none;display:inline-block;}
 .book-cover {top:22%;}
 .book-cover p {padding: 0 8px; color: $text-color; font-size: 13px;}
 .set-one label span {padding-right:5px;}
 .set-one p {text-align:left;}
 .set-one label {font-size:13px;}
+.set-one{text-align: left;}
 .right-space {padding-left:0;}
 .add-to-cart a {padding:5px 5px;font-size: 12px;}
 }
@@ -103,6 +110,12 @@ body {font-family:$font-family;font-size:14px;margin:0;padding:0;}
 .sec-light {margin:0 -10px;}
 .multiboxes {width:45%;padding:0 10px;}
 .book-cover {top:25%;}
+.set-one p{font-size: 11px;}
+.set-one label{font-size: 11px;}
+.add-to-cart a{font-size: 11px;}
+.items-one{min-height: 0;}
+.set-one p { white-space: nowrap; overflow: hidden; text-overflow: ellipsis;  }
+
 }
 
 @media (max-width:480px) {
@@ -110,15 +123,15 @@ body {font-family:$font-family;font-size:14px;margin:0;padding:0;}
 .left-title {width:40%;}
 .right-title {width:56%;float:right;}
 .sec-light {margin:0 -5px;}
-.multiboxes {width:46%; padding:0 5px;}
+.multiboxes {width:auto; padding:0 5px;}
 .space-over-img {padding:20px 0;}
 .label-one {top:20px;ft-size: 12px;padding: 3px 5px;}
 .box-cm {width:75%;}
 .book-cover {top:21%;}
 .book-cover p {font-size:11px;}
 .set-one {float:none;}
-.set-one p {text-align:center;}
 .set-two {float:none;clear:both;}
+
 }
 
 @media (max-width:359px) {
