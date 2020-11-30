@@ -282,6 +282,9 @@ body {
 .row-center {
   text-align: center; }
 
+.value-last i {
+  color: red; }
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .container {
     width: 960px; }

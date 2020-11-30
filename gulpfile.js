@@ -1,6 +1,9 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const del = require('del');
+const minify = require('gulp-minify');
+const concat = require('gulp-concat');
+
 gulp.task('styles', () => {
     return gulp.src('sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
@@ -19,4 +22,11 @@ gulp.task('watch', () => {
     });
 });
 
-gulp.task('default', gulp.series(['clean', 'styles']));
+gulp.task('pack-js', function () {    
+    return gulp.src(['js/*.js'])
+        //.pipe(concat('bundle.js'))
+        .pipe(minify())
+        .pipe(gulp.dest('js'));
+});
+
+gulp.task('default', gulp.series(['clean', 'styles','pack-js']));
