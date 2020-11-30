@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link rel="canonical" href="" />
-	<title>Project</title>
+	<title>Add to Cart Widget</title>
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
     <!-- Google Font -->
@@ -19,7 +19,7 @@
  <div class="container">   
   <div class="set-top">
    <div class="left-title"><h3>All Items</h3></div>
-   <div class="right-title"><a href="javascript:void(0);" id="itemnameadd">Item2 is added to cart</a></div>
+   <div class="right-title"><a href="javascript:void(0);" id="itemnameadd">Item <span class="itemcount"></span> is added to cart</a></div>
   </div>
   <div class="double-section">
    <div class="left-section">
@@ -33,7 +33,7 @@
      <table id="tableId">
       <thead>
        <tr>
-        <th>Items [<span id="itemcount"></span>]</th>
+        <th>Items [<span class="itemcount"></span>]</th>
         <th>Qty</th>
         <th>Price</th>
        </tr> 
@@ -49,10 +49,10 @@
       <div class="total-title">
         <h4>Total</h4>
       </div>
-      <div class="cm-tl first-itmes"><p>Items (<span id="bottomcount"></span>) <span>:</span></p> <p id="price"></p></div>
+      <div class="cm-tl first-itmes"><p>Items (<span class="itemcount"></span>) <span>:</span></p> <p id="price"></p></div>
       <div class="cm-tl"><p>Discount <span>:</span></p> <p id="discount"></p></div>
       <div class="cm-tl"><p>Type Discount <span>:</span></p> <p>0</p></div>
-      <div class="order-tl"><p>Order Total</p> <p></i>0</p></div>
+      <div class="order-tl"><p>Order Total</p> <p id="totalprice">0</p></div>
      </div>  
      </div>
    </div> 

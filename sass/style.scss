@@ -64,6 +64,7 @@ body {font-family:$font-family;font-size:14px;margin:0;padding:0;}
 .order-tl p {margin: 0;float:left;width:50%;font-weight:bold;color: #555;}
 .order-tl p:last-child {text-align:right;}
 .row-center{text-align: center;}
+.value-last i{color:red;}
 @media (min-width:992px) and (max-width:1199px) {
 .container {width:960px;}
 .multiboxes {width:28%;}
